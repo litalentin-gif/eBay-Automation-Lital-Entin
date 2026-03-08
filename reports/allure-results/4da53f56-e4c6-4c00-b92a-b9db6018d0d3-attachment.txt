@@ -1,0 +1,109 @@
+[32mINFO    [0m conftest:conftest.py:81 [conftest] [web] Launching firefox (headless=False)
+[32mINFO    [0m test_ebay_e2e:test_ebay_e2e.py:45 
+============================================================
+Scenario: TC_001 — Search for shoes under $220
+============================================================
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com
+[32mINFO    [0m pages.search_page:search_page.py:42 [SearchPage] Searching: 'shoes' | max_price=800 | limit=5
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Search box' — attempt 1/2 using: input#gh-ac
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Search box' found on attempt 1 with: input#gh-ac
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Search button' — attempt 1/3 using: input#gh-btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Search button' attempt 1 FAILED with: input#gh-btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Search button' — attempt 2/3 using: button[type='submit']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Search button' found on attempt 2 with: button[type='submit']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Max price input' — attempt 1/2 using: input[aria-label='Maximum Value in $']
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Max price input' attempt 1 FAILED with: input[aria-label='Maximum Value in $']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Max price input' — attempt 2/2 using: input[placeholder='Max']
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Max price input' attempt 2 FAILED with: input[placeholder='Max']
+[31m[1mERROR   [0m utils.locator_utils:locator_utils.py:97 [SmartLocator] 📸 Failure screenshot saved: reports/screenshots/FAIL_Max price input_20260308_210713.png
+[33mWARNING [0m pages.search_page:search_page.py:100 [SearchPage] Price filter UI not found - filtering manually.
+[32mINFO    [0m pages.search_page:search_page.py:52 [SearchPage] Scraping page 1...
+[32mINFO    [0m pages.search_page:search_page.py:132 [SearchPage] Found 10 items under 800
+[32mINFO    [0m pages.search_page:search_page.py:55 [SearchPage] Page 1: got 5 items. Total: 5/5
+[32mINFO    [0m pages.search_page:search_page.py:66 [SearchPage] Final result: 5 URLs collected.
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/search_results_shoes_20260308_210714.png
+[32mINFO    [0m test_ebay_e2e:test_ebay_e2e.py:57 Found 5 items matching criteria.
+[32mINFO    [0m pages.item_page:item_page.py:77 [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/406740849491?_skw=shoes&itmmeta=01KK7DH3SRBBBM2VA0FDZ52...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/406740849491?_skw=shoes&itmmeta=01KK7DH3SRBBBM2VA0FDZ52XDR&hash=item5eb3a4d353:g:8v8AAeSwC1Vpqjy1&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xDHItY1AD6VOP4vuDALY00%2BDWj1%2F6B1xNs2I%2FxcvUM13s5R1lOwSZrb5ydBCB4dfSfxzvzafsywAGTgDCIC3swwvWA7bJAlNHXfoPxgB6%2FQeMyhs%2BrPldEsGTNseL4vH2Vtxt7EEEiIgHgsHst1ROWCEHEX8fVpH8Dgf%2BWQfCli52BAr9K6ob16p8AtDY5XoqoC2AW2kUh2yEN8AXlTwgRN28jTL%2Bza%2F9p%2FgQv0JvpRyQ%3D%3D%7Ctkp%3ABk9SR6C9xO2ZZw
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+[32mINFO    [0m pages.item_page:item_page.py:84 [ItemPage] Product: Nike Minds Slides
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+[32mINFO    [0m pages.item_page:item_page.py:95 [ItemPage] [ok] Added to cart: Nike Minds Slides
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Nike_Minds_Slides_20260308_210729.png
+[32mINFO    [0m pages.item_page:item_page.py:77 [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/376849461735?_skw=shoes&itmmeta=01KK7DH3SRRYEYEMTHV9D4D...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/376849461735?_skw=shoes&itmmeta=01KK7DH3SRRYEYEMTHV9D4DJ4J&hash=item57bdfa71e7:g:66gAAeSw4U9pYMrz&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBebCrp%2Fx4nQxKPJDwRf7iZy0sqC4BUT9vDYfyBIAA7tDLLq1yoZhZcBvk%2FN5M3Pld08m4T351LHRSE%2B%2Bad1KDq0UqV5rjMZylcIMOWswz0BO3fyJwcI4yCR3t3J6HkQEbxKAUXkfpfdOZZ7XT8CO7W2ptLaiHxo7dSlrGzwGIon6Fd%2Bq2NEOxKDAC8gJ8vWzj3BeYIOsm5E8KPcTLe8su%2FEmubzQFhltyh%2BuiphC7rjV80AAWSimqlSOO3h%2Fe3PHdItttYZ1agraYU%2ByWPccsq%7Ctkp%3ABFBMoL3E7Zln
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+[32mINFO    [0m pages.item_page:item_page.py:84 [ItemPage] Product: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+[32mINFO    [0m pages.item_page:item_page.py:95 [ItemPage] [ok] Added to cart: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Quick_Dry_Aqua_Socks_Adults+Ki_20260308_210743.png
+[32mINFO    [0m pages.item_page:item_page.py:77 [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/236305831395?_skw=shoes&itmmeta=01KK7DH3SRKENFV8VPN3EY3...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/236305831395?_skw=shoes&itmmeta=01KK7DH3SRKENFV8VPN3EY3M4M&hash=item3704ecd5e3:g:i4gAAeSwyj1ouGtZ&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xCw1QwucuTnO4v5t%2FYk06LOnD8EtkwOl3C%2BxwPqxazZ5Af7KH12OY0Y4uokxAFYEXp%2BmGDPZG7wjmed0RdyoBaqinD7UUc3SR9zNbPvE4XgFPHIIPPRKsrYg4%2BWm7AFZ7vxbziYcwr%2BKw0uQjKSVgfscSWeZrYyc70T%2F7tSCMI0gyIWk0G1KdFxrzgN7zAnNWDTldKDT0ehunPJ8StQ0YGnuBClU1dTL3bvLCbrNrJTnz3jQIbdOIMEHmlRaRqBNBXApz2OdqwAnmSG6Et%2B5Li1%7Ctkp%3ABFBMoL3E7Zln
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+[32mINFO    [0m pages.item_page:item_page.py:84 [ItemPage] Product: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+[32mINFO    [0m pages.item_page:item_page.py:95 [ItemPage] [ok] Added to cart: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Quick_Dry_Aqua_Socks_Adults+Ki_20260308_210756.png
+[32mINFO    [0m pages.item_page:item_page.py:77 [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/201348439011?_skw=shoes&itmmeta=01KK7DH3SR2HEKM75E8SG9D...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/201348439011?_skw=shoes&itmmeta=01KK7DH3SR2HEKM75E8SG9DSM2&hash=item2ee14d5be3:g:4ukAAMXQHO9RbjPA&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xD0ww%2FgoCMvHKsTQ9HR7a%2BouP8Ax4rUjwglXVH%2FTq9QAMyPjEFpSJfjjPekZ%2BW4SKPOHHsYfpve3MUfAj9%2FzGL3e70P4b1CoNqqEJ0GZg%2BP7ZxGhxhT%2BkgmLtOlCI7TNUsYEPKXdHCzXn%2B47nhkGoxzYKqE8ZrzNrOKLQBBXk3IkhJudO1HIfm7crUbkw4bQ3Q1qP2C1gBkQWQaHJmMOm2xQqec66BcTx6vfFjnoWng5A5CF3R0l5hGtEraeW6CJf7v%2BkjBuxt42dxLeJ6CUNE3%7Ctkp%3ABFBMoL3E7Zln
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+[32mINFO    [0m pages.item_page:item_page.py:84 [ItemPage] Product: ADIDAS TAEKWONDO SHOES/SM-3/Adidas TKD SHOES/Hapkido/KARATED
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+[32mINFO    [0m pages.item_page:item_page.py:95 [ItemPage] [ok] Added to cart: ADIDAS TAEKWONDO SHOES/SM-3/Adidas TKD SHOES/Hapkido/KARATED
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_ADIDAS_TAEKWONDO_SHOES/SM-3/Ad_20260308_210809.png
+[32mINFO    [0m pages.item_page:item_page.py:77 [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/306806687024?_skw=shoes&itmmeta=01KK7DH3SRFVJXNF48WXTHJ...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/306806687024?_skw=shoes&itmmeta=01KK7DH3SRFVJXNF48WXTHJV8T&hash=item476f1a8530:g:tZsAAeSw7cppqui7&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xDkIp8PWv%2Fd7FVH%2FpIsgFmm%2FJqaVJnU6svN%2BBcrDXSbatPTwfgtl%2FgxXzSvNxVRmXGMAbc5y5gBAE3e4a%2FmMgtj3psxN9y9z%2F1Plh7fXcWWRw%2FStlVPiQylB9Idi%2BlnLVlWYfP16NeDx6sZVfzMYXg5q6N%2Ft%2BjoL05NFSSUV7HLQmkmRJBzR2aZvxU5TlxL0A0ZgRlLRtcosGpMc7t%2BG6Xijz5f45UTU9hD3zva5ON2CQ%3D%3D%7Ctkp%3ABk9SR6C9xO2ZZw
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+[32mINFO    [0m pages.item_page:item_page.py:84 [ItemPage] Product: P6000 Nike Shoes Any and All Size Brand New with Box and Tag
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+[32mINFO    [0m pages.item_page:item_page.py:95 [ItemPage] [ok] Added to cart: P6000 Nike Shoes Any and All Size Brand New with Box and Tag
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_P6000_Nike_Shoes_Any_and_All_S_20260308_210822.png
+[32mINFO    [0m test_ebay_e2e:test_ebay_e2e.py:78 Successfully added 5/5 items to cart.
+[32mINFO    [0m pages.cart_page:cart_page.py:51 [CartPage] [assert] Asserting cart total ≤ $4000.00 (5 items × $800)
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://cart.payments.ebay.com/sc/view
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Cart subtotal' — attempt 1/3 using: //span[@id='subtotal-value']
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Cart subtotal' attempt 1 FAILED with: //span[@id='subtotal-value']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Cart subtotal' — attempt 2/3 using: span.sc-subtotal-amount
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Cart subtotal' attempt 2 FAILED with: span.sc-subtotal-amount
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Cart subtotal' — attempt 3/3 using: //div[contains(@class,'sc-subtotal')]//span[contains(@class,'amount')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Cart subtotal' attempt 3 FAILED with: //div[contains(@class,'sc-subtotal')]//span[contains(@class,'amount')]
+[31m[1mERROR   [0m utils.locator_utils:locator_utils.py:97 [SmartLocator] 📸 Failure screenshot saved: reports/screenshots/FAIL_Cart subtotal_20260308_210847.png
+[33mWARNING [0m pages.cart_page:cart_page.py:91 [CartPage] [warning]  Could not read subtotal element: [SmartLocator] All 3 locators failed for 'Cart subtotal'. Tried: ["//span[@id='subtotal-value']", 'span.sc-subtotal-amount', "//div[contains(@class,'sc-subtotal')]//span[contains(@class,'amount')]"]
+[32mINFO    [0m pages.cart_page:cart_page.py:94 [CartPage] Falling back to summing individual item prices...
+[32mINFO    [0m pages.cart_page:cart_page.py:107 [CartPage] Summed 0 items = $0.00
+[32mINFO    [0m pages.cart_page:cart_page.py:61 [CartPage] [total] Cart total: $0.00 | Max allowed: $4000.00
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_assertion_20260308_210847.png
+[32mINFO    [0m pages.cart_page:cart_page.py:132 [CartPage] [cart] Trace saved: reports/cart_trace_20260308_210847.txt
+[32mINFO    [0m pages.cart_page:cart_page.py:74 [CartPage] [ok] Assertion PASSED: $0.00 ≤ $4000.00
+[32mINFO    [0m test_ebay_e2e:test_ebay_e2e.py:86 [ok] Scenario TC_001 PASSED!
+[32mINFO    [0m conftest:conftest.py:89 [conftest] [closed] Closed firefox

@@ -1,0 +1,1383 @@
+2026-03-08 21:06:50,325 [INFO] conftest: [conftest] [web] Launching firefox (headless=False)
+2026-03-08 21:06:52,716 [INFO] test_ebay_e2e: 
+============================================================
+Scenario: TC_001 — Search for shoes under $220
+============================================================
+2026-03-08 21:06:52,717 [INFO] pages.base_page: [BasePage] Navigating to: https://www.ebay.com
+2026-03-08 21:06:53,934 [INFO] pages.search_page: [SearchPage] Searching: 'shoes' | max_price=800 | limit=5
+2026-03-08 21:06:57,009 [INFO] utils.locator_utils: [SmartLocator] 'Search box' — attempt 1/2 using: input#gh-ac
+2026-03-08 21:06:57,032 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Search box' found on attempt 1 with: input#gh-ac
+2026-03-08 21:06:57,138 [INFO] utils.locator_utils: [SmartLocator] 'Search button' — attempt 1/3 using: input#gh-btn
+2026-03-08 21:07:02,169 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Search button' attempt 1 FAILED with: input#gh-btn
+2026-03-08 21:07:02,169 [INFO] utils.locator_utils: [SmartLocator] 'Search button' — attempt 2/3 using: button[type='submit']
+2026-03-08 21:07:02,189 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Search button' found on attempt 2 with: button[type='submit']
+2026-03-08 21:07:05,403 [INFO] utils.locator_utils: [SmartLocator] 'Max price input' — attempt 1/2 using: input[aria-label='Maximum Value in $']
+2026-03-08 21:07:09,543 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Max price input' attempt 1 FAILED with: input[aria-label='Maximum Value in $']
+2026-03-08 21:07:09,543 [INFO] utils.locator_utils: [SmartLocator] 'Max price input' — attempt 2/2 using: input[placeholder='Max']
+2026-03-08 21:07:13,600 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Max price input' attempt 2 FAILED with: input[placeholder='Max']
+2026-03-08 21:07:13,732 [ERROR] utils.locator_utils: [SmartLocator] 📸 Failure screenshot saved: reports/screenshots/FAIL_Max price input_20260308_210713.png
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f8' in position 68: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 55, in test_search_and_buy_under_budget
+    urls = search_page.search_items_by_name_under_price(query, max_price, limit)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\search_page.py", line 45, in search_items_by_name_under_price
+    self._apply_price_filter(max_price)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\search_page.py", line 93, in _apply_price_filter
+    max_input = self.smart(self.MAX_PRICE_INPUT, "Max price input").find(timeout=4000)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\utils\locator_utils.py", line 63, in find
+    self._take_failure_screenshot()
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\utils\locator_utils.py", line 97, in _take_failure_screenshot
+    logger.error(f"[SmartLocator] 📸 Failure screenshot saved: {path}")
+Message: '[SmartLocator] 📸 Failure screenshot saved: reports/screenshots/FAIL_Max price input_20260308_210713.png'
+Arguments: ()
+2026-03-08 21:07:13,733 [WARNING] pages.search_page: [SearchPage] Price filter UI not found - filtering manually.
+2026-03-08 21:07:13,733 [INFO] pages.search_page: [SearchPage] Scraping page 1...
+2026-03-08 21:07:14,829 [INFO] pages.search_page: [SearchPage] Found 10 items under 800
+2026-03-08 21:07:14,829 [INFO] pages.search_page: [SearchPage] Page 1: got 5 items. Total: 5/5
+2026-03-08 21:07:14,829 [INFO] pages.search_page: [SearchPage] Final result: 5 URLs collected.
+2026-03-08 21:07:15,227 [INFO] pages.base_page: [BasePage] 📸 Screenshot saved: reports/screenshots/search_results_shoes_20260308_210714.png
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f8' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 55, in test_search_and_buy_under_budget
+    urls = search_page.search_items_by_name_under_price(query, max_price, limit)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\search_page.py", line 67, in search_items_by_name_under_price
+    self.take_screenshot(f"search_results_{query}")
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\base_page.py", line 49, in take_screenshot
+    logger.info(f"[BasePage] 📸 Screenshot saved: {path}")
+Message: '[BasePage] 📸 Screenshot saved: reports/screenshots/search_results_shoes_20260308_210714.png'
+Arguments: ()
+2026-03-08 21:07:15,229 [INFO] test_ebay_e2e: Found 5 items matching criteria.
+2026-03-08 21:07:15,230 [INFO] pages.item_page: [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/406740849491?_skw=shoes&itmmeta=01KK7DH3SRBBBM2VA0FDZ52...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f6d2' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 74, in test_search_and_buy_under_budget
+    success = item_page.add_item_to_cart(url)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\item_page.py", line 77, in add_item_to_cart
+    logger.info(f"[ItemPage] 🛒 Opening item: {url[:80]}...")
+Message: '[ItemPage] 🛒 Opening item: https://www.ebay.com/itm/406740849491?_skw=shoes&itmmeta=01KK7DH3SRBBBM2VA0FDZ52...'
+Arguments: ()
+2026-03-08 21:07:15,231 [INFO] pages.base_page: [BasePage] Navigating to: https://www.ebay.com/itm/406740849491?_skw=shoes&itmmeta=01KK7DH3SRBBBM2VA0FDZ52XDR&hash=item5eb3a4d353:g:8v8AAeSwC1Vpqjy1&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xDHItY1AD6VOP4vuDALY00%2BDWj1%2F6B1xNs2I%2FxcvUM13s5R1lOwSZrb5ydBCB4dfSfxzvzafsywAGTgDCIC3swwvWA7bJAlNHXfoPxgB6%2FQeMyhs%2BrPldEsGTNseL4vH2Vtxt7EEEiIgHgsHst1ROWCEHEX8fVpH8Dgf%2BWQfCli52BAr9K6ob16p8AtDY5XoqoC2AW2kUh2yEN8AXlTwgRN28jTL%2Bza%2F9p%2FgQv0JvpRyQ%3D%3D%7Ctkp%3ABk9SR6C9xO2ZZw
+2026-03-08 21:07:15,952 [INFO] utils.locator_utils: [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+2026-03-08 21:07:18,872 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+2026-03-08 21:07:19,022 [INFO] pages.item_page: [ItemPage] Product: Nike Minds Slides
+2026-03-08 21:07:19,269 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+2026-03-08 21:07:24,426 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+2026-03-08 21:07:24,426 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+2026-03-08 21:07:29,475 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+2026-03-08 21:07:29,475 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+2026-03-08 21:07:29,512 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+2026-03-08 21:07:29,626 [INFO] pages.item_page: [ItemPage] [ok] Added to cart: Nike Minds Slides
+2026-03-08 21:07:29,819 [INFO] pages.base_page: [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Nike_Minds_Slides_20260308_210729.png
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f8' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 74, in test_search_and_buy_under_budget
+    success = item_page.add_item_to_cart(url)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\item_page.py", line 96, in add_item_to_cart
+    self.take_screenshot(f"cart_add_{title[:30].replace(' ', '_')}")
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\base_page.py", line 49, in take_screenshot
+    logger.info(f"[BasePage] 📸 Screenshot saved: {path}")
+Message: '[BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Nike_Minds_Slides_20260308_210729.png'
+Arguments: ()
+2026-03-08 21:07:29,820 [INFO] pages.item_page: [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/376849461735?_skw=shoes&itmmeta=01KK7DH3SRRYEYEMTHV9D4D...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f6d2' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 74, in test_search_and_buy_under_budget
+    success = item_page.add_item_to_cart(url)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\item_page.py", line 77, in add_item_to_cart
+    logger.info(f"[ItemPage] 🛒 Opening item: {url[:80]}...")
+Message: '[ItemPage] 🛒 Opening item: https://www.ebay.com/itm/376849461735?_skw=shoes&itmmeta=01KK7DH3SRRYEYEMTHV9D4D...'
+Arguments: ()
+2026-03-08 21:07:29,821 [INFO] pages.base_page: [BasePage] Navigating to: https://www.ebay.com/itm/376849461735?_skw=shoes&itmmeta=01KK7DH3SRRYEYEMTHV9D4DJ4J&hash=item57bdfa71e7:g:66gAAeSw4U9pYMrz&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBebCrp%2Fx4nQxKPJDwRf7iZy0sqC4BUT9vDYfyBIAA7tDLLq1yoZhZcBvk%2FN5M3Pld08m4T351LHRSE%2B%2Bad1KDq0UqV5rjMZylcIMOWswz0BO3fyJwcI4yCR3t3J6HkQEbxKAUXkfpfdOZZ7XT8CO7W2ptLaiHxo7dSlrGzwGIon6Fd%2Bq2NEOxKDAC8gJ8vWzj3BeYIOsm5E8KPcTLe8su%2FEmubzQFhltyh%2BuiphC7rjV80AAWSimqlSOO3h%2Fe3PHdItttYZ1agraYU%2ByWPccsq%7Ctkp%3ABFBMoL3E7Zln
+2026-03-08 21:07:31,676 [INFO] utils.locator_utils: [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+2026-03-08 21:07:32,031 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+2026-03-08 21:07:32,501 [INFO] pages.item_page: [ItemPage] Product: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+2026-03-08 21:07:32,941 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+2026-03-08 21:07:38,003 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+2026-03-08 21:07:38,003 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+2026-03-08 21:07:43,048 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+2026-03-08 21:07:43,049 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+2026-03-08 21:07:43,086 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+2026-03-08 21:07:43,199 [INFO] pages.item_page: [ItemPage] [ok] Added to cart: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+2026-03-08 21:07:43,392 [INFO] pages.base_page: [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Quick_Dry_Aqua_Socks_Adults+Ki_20260308_210743.png
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f8' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 74, in test_search_and_buy_under_budget
+    success = item_page.add_item_to_cart(url)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\item_page.py", line 96, in add_item_to_cart
+    self.take_screenshot(f"cart_add_{title[:30].replace(' ', '_')}")
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\base_page.py", line 49, in take_screenshot
+    logger.info(f"[BasePage] 📸 Screenshot saved: {path}")
+Message: '[BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Quick_Dry_Aqua_Socks_Adults+Ki_20260308_210743.png'
+Arguments: ()
+2026-03-08 21:07:43,401 [INFO] pages.item_page: [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/236305831395?_skw=shoes&itmmeta=01KK7DH3SRKENFV8VPN3EY3...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f6d2' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 74, in test_search_and_buy_under_budget
+    success = item_page.add_item_to_cart(url)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\item_page.py", line 77, in add_item_to_cart
+    logger.info(f"[ItemPage] 🛒 Opening item: {url[:80]}...")
+Message: '[ItemPage] 🛒 Opening item: https://www.ebay.com/itm/236305831395?_skw=shoes&itmmeta=01KK7DH3SRKENFV8VPN3EY3...'
+Arguments: ()
+2026-03-08 21:07:43,403 [INFO] pages.base_page: [BasePage] Navigating to: https://www.ebay.com/itm/236305831395?_skw=shoes&itmmeta=01KK7DH3SRKENFV8VPN3EY3M4M&hash=item3704ecd5e3:g:i4gAAeSwyj1ouGtZ&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xCw1QwucuTnO4v5t%2FYk06LOnD8EtkwOl3C%2BxwPqxazZ5Af7KH12OY0Y4uokxAFYEXp%2BmGDPZG7wjmed0RdyoBaqinD7UUc3SR9zNbPvE4XgFPHIIPPRKsrYg4%2BWm7AFZ7vxbziYcwr%2BKw0uQjKSVgfscSWeZrYyc70T%2F7tSCMI0gyIWk0G1KdFxrzgN7zAnNWDTldKDT0ehunPJ8StQ0YGnuBClU1dTL3bvLCbrNrJTnz3jQIbdOIMEHmlRaRqBNBXApz2OdqwAnmSG6Et%2B5Li1%7Ctkp%3ABFBMoL3E7Zln
+2026-03-08 21:07:45,279 [INFO] utils.locator_utils: [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+2026-03-08 21:07:45,587 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+2026-03-08 21:07:46,124 [INFO] pages.item_page: [ItemPage] Product: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+2026-03-08 21:07:46,519 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+2026-03-08 21:07:51,635 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+2026-03-08 21:07:51,635 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+2026-03-08 21:07:56,683 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+2026-03-08 21:07:56,683 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+2026-03-08 21:07:56,721 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+2026-03-08 21:07:56,840 [INFO] pages.item_page: [ItemPage] [ok] Added to cart: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+2026-03-08 21:07:57,028 [INFO] pages.base_page: [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Quick_Dry_Aqua_Socks_Adults+Ki_20260308_210756.png
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f8' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 74, in test_search_and_buy_under_budget
+    success = item_page.add_item_to_cart(url)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\item_page.py", line 96, in add_item_to_cart
+    self.take_screenshot(f"cart_add_{title[:30].replace(' ', '_')}")
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\base_page.py", line 49, in take_screenshot
+    logger.info(f"[BasePage] 📸 Screenshot saved: {path}")
+Message: '[BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Quick_Dry_Aqua_Socks_Adults+Ki_20260308_210756.png'
+Arguments: ()
+2026-03-08 21:07:57,029 [INFO] pages.item_page: [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/201348439011?_skw=shoes&itmmeta=01KK7DH3SR2HEKM75E8SG9D...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f6d2' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 74, in test_search_and_buy_under_budget
+    success = item_page.add_item_to_cart(url)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\item_page.py", line 77, in add_item_to_cart
+    logger.info(f"[ItemPage] 🛒 Opening item: {url[:80]}...")
+Message: '[ItemPage] 🛒 Opening item: https://www.ebay.com/itm/201348439011?_skw=shoes&itmmeta=01KK7DH3SR2HEKM75E8SG9D...'
+Arguments: ()
+2026-03-08 21:07:57,031 [INFO] pages.base_page: [BasePage] Navigating to: https://www.ebay.com/itm/201348439011?_skw=shoes&itmmeta=01KK7DH3SR2HEKM75E8SG9DSM2&hash=item2ee14d5be3:g:4ukAAMXQHO9RbjPA&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xD0ww%2FgoCMvHKsTQ9HR7a%2BouP8Ax4rUjwglXVH%2FTq9QAMyPjEFpSJfjjPekZ%2BW4SKPOHHsYfpve3MUfAj9%2FzGL3e70P4b1CoNqqEJ0GZg%2BP7ZxGhxhT%2BkgmLtOlCI7TNUsYEPKXdHCzXn%2B47nhkGoxzYKqE8ZrzNrOKLQBBXk3IkhJudO1HIfm7crUbkw4bQ3Q1qP2C1gBkQWQaHJmMOm2xQqec66BcTx6vfFjnoWng5A5CF3R0l5hGtEraeW6CJf7v%2BkjBuxt42dxLeJ6CUNE3%7Ctkp%3ABFBMoL3E7Zln
+2026-03-08 21:07:58,845 [INFO] utils.locator_utils: [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+2026-03-08 21:07:59,080 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+2026-03-08 21:07:59,126 [INFO] pages.item_page: [ItemPage] Product: ADIDAS TAEKWONDO SHOES/SM-3/Adidas TKD SHOES/Hapkido/KARATED
+2026-03-08 21:07:59,192 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+2026-03-08 21:08:04,280 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+2026-03-08 21:08:04,281 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+2026-03-08 21:08:09,320 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+2026-03-08 21:08:09,320 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+2026-03-08 21:08:09,357 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+2026-03-08 21:08:09,479 [INFO] pages.item_page: [ItemPage] [ok] Added to cart: ADIDAS TAEKWONDO SHOES/SM-3/Adidas TKD SHOES/Hapkido/KARATED
+2026-03-08 21:08:09,664 [INFO] pages.base_page: [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_ADIDAS_TAEKWONDO_SHOES/SM-3/Ad_20260308_210809.png
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f8' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 74, in test_search_and_buy_under_budget
+    success = item_page.add_item_to_cart(url)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\item_page.py", line 96, in add_item_to_cart
+    self.take_screenshot(f"cart_add_{title[:30].replace(' ', '_')}")
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\base_page.py", line 49, in take_screenshot
+    logger.info(f"[BasePage] 📸 Screenshot saved: {path}")
+Message: '[BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_ADIDAS_TAEKWONDO_SHOES/SM-3/Ad_20260308_210809.png'
+Arguments: ()
+2026-03-08 21:08:09,665 [INFO] pages.item_page: [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/306806687024?_skw=shoes&itmmeta=01KK7DH3SRFVJXNF48WXTHJ...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f6d2' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 74, in test_search_and_buy_under_budget
+    success = item_page.add_item_to_cart(url)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\item_page.py", line 77, in add_item_to_cart
+    logger.info(f"[ItemPage] 🛒 Opening item: {url[:80]}...")
+Message: '[ItemPage] 🛒 Opening item: https://www.ebay.com/itm/306806687024?_skw=shoes&itmmeta=01KK7DH3SRFVJXNF48WXTHJ...'
+Arguments: ()
+2026-03-08 21:08:09,666 [INFO] pages.base_page: [BasePage] Navigating to: https://www.ebay.com/itm/306806687024?_skw=shoes&itmmeta=01KK7DH3SRFVJXNF48WXTHJV8T&hash=item476f1a8530:g:tZsAAeSw7cppqui7&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xDkIp8PWv%2Fd7FVH%2FpIsgFmm%2FJqaVJnU6svN%2BBcrDXSbatPTwfgtl%2FgxXzSvNxVRmXGMAbc5y5gBAE3e4a%2FmMgtj3psxN9y9z%2F1Plh7fXcWWRw%2FStlVPiQylB9Idi%2BlnLVlWYfP16NeDx6sZVfzMYXg5q6N%2Ft%2BjoL05NFSSUV7HLQmkmRJBzR2aZvxU5TlxL0A0ZgRlLRtcosGpMc7t%2BG6Xijz5f45UTU9hD3zva5ON2CQ%3D%3D%7Ctkp%3ABk9SR6C9xO2ZZw
+2026-03-08 21:08:11,126 [INFO] utils.locator_utils: [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+2026-03-08 21:08:11,382 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+2026-03-08 21:08:11,491 [INFO] pages.item_page: [ItemPage] Product: P6000 Nike Shoes Any and All Size Brand New with Box and Tag
+2026-03-08 21:08:12,009 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+2026-03-08 21:08:17,070 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+2026-03-08 21:08:17,070 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+2026-03-08 21:08:22,113 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+2026-03-08 21:08:22,114 [INFO] utils.locator_utils: [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+2026-03-08 21:08:22,146 [INFO] utils.locator_utils: [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+2026-03-08 21:08:22,249 [INFO] pages.item_page: [ItemPage] [ok] Added to cart: P6000 Nike Shoes Any and All Size Brand New with Box and Tag
+2026-03-08 21:08:22,433 [INFO] pages.base_page: [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_P6000_Nike_Shoes_Any_and_All_S_20260308_210822.png
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f8' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 74, in test_search_and_buy_under_budget
+    success = item_page.add_item_to_cart(url)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\item_page.py", line 96, in add_item_to_cart
+    self.take_screenshot(f"cart_add_{title[:30].replace(' ', '_')}")
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\base_page.py", line 49, in take_screenshot
+    logger.info(f"[BasePage] 📸 Screenshot saved: {path}")
+Message: '[BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_P6000_Nike_Shoes_Any_and_All_S_20260308_210822.png'
+Arguments: ()
+2026-03-08 21:08:22,434 [INFO] test_ebay_e2e: Successfully added 5/5 items to cart.
+2026-03-08 21:08:22,434 [INFO] pages.cart_page: [CartPage] [assert] Asserting cart total ≤ $4000.00 (5 items × $800)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2264' in position 89: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 84, in test_search_and_buy_under_budget
+    cart_page.assert_cart_total_not_exceeds(budget_per_item, added_count)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\cart_page.py", line 51, in assert_cart_total_not_exceeds
+    logger.info(
+Message: '[CartPage] [assert] Asserting cart total ≤ $4000.00 (5 items × $800)'
+Arguments: ()
+2026-03-08 21:08:22,435 [INFO] pages.base_page: [BasePage] Navigating to: https://cart.payments.ebay.com/sc/view
+2026-03-08 21:08:23,312 [INFO] utils.locator_utils: [SmartLocator] 'Cart subtotal' — attempt 1/3 using: //span[@id='subtotal-value']
+2026-03-08 21:08:31,357 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Cart subtotal' attempt 1 FAILED with: //span[@id='subtotal-value']
+2026-03-08 21:08:31,357 [INFO] utils.locator_utils: [SmartLocator] 'Cart subtotal' — attempt 2/3 using: span.sc-subtotal-amount
+2026-03-08 21:08:39,420 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Cart subtotal' attempt 2 FAILED with: span.sc-subtotal-amount
+2026-03-08 21:08:39,422 [INFO] utils.locator_utils: [SmartLocator] 'Cart subtotal' — attempt 3/3 using: //div[contains(@class,'sc-subtotal')]//span[contains(@class,'amount')]
+2026-03-08 21:08:47,439 [WARNING] utils.locator_utils: [SmartLocator] [fail] 'Cart subtotal' attempt 3 FAILED with: //div[contains(@class,'sc-subtotal')]//span[contains(@class,'amount')]
+2026-03-08 21:08:47,481 [ERROR] utils.locator_utils: [SmartLocator] 📸 Failure screenshot saved: reports/screenshots/FAIL_Cart subtotal_20260308_210847.png
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f8' in position 68: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 84, in test_search_and_buy_under_budget
+    cart_page.assert_cart_total_not_exceeds(budget_per_item, added_count)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\cart_page.py", line 60, in assert_cart_total_not_exceeds
+    actual_total = self._read_cart_total()
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\cart_page.py", line 86, in _read_cart_total
+    total_text = self.smart(self.CART_SUBTOTAL, "Cart subtotal").find(timeout=8000).inner_text()
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\utils\locator_utils.py", line 63, in find
+    self._take_failure_screenshot()
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\utils\locator_utils.py", line 97, in _take_failure_screenshot
+    logger.error(f"[SmartLocator] 📸 Failure screenshot saved: {path}")
+Message: '[SmartLocator] 📸 Failure screenshot saved: reports/screenshots/FAIL_Cart subtotal_20260308_210847.png'
+Arguments: ()
+2026-03-08 21:08:47,483 [WARNING] pages.cart_page: [CartPage] [warning]  Could not read subtotal element: [SmartLocator] All 3 locators failed for 'Cart subtotal'. Tried: ["//span[@id='subtotal-value']", 'span.sc-subtotal-amount', "//div[contains(@class,'sc-subtotal')]//span[contains(@class,'amount')]"]
+2026-03-08 21:08:47,483 [INFO] pages.cart_page: [CartPage] Falling back to summing individual item prices...
+2026-03-08 21:08:47,497 [INFO] pages.cart_page: [CartPage] Summed 0 items = $0.00
+2026-03-08 21:08:47,498 [INFO] pages.cart_page: [CartPage] [total] Cart total: $0.00 | Max allowed: $4000.00
+2026-03-08 21:08:47,572 [INFO] pages.base_page: [BasePage] 📸 Screenshot saved: reports/screenshots/cart_assertion_20260308_210847.png
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f8' in position 59: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 84, in test_search_and_buy_under_budget
+    cart_page.assert_cart_total_not_exceeds(budget_per_item, added_count)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\cart_page.py", line 64, in assert_cart_total_not_exceeds
+    self.take_screenshot("cart_assertion")
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\base_page.py", line 49, in take_screenshot
+    logger.info(f"[BasePage] 📸 Screenshot saved: {path}")
+Message: '[BasePage] 📸 Screenshot saved: reports/screenshots/cart_assertion_20260308_210847.png'
+Arguments: ()
+2026-03-08 21:08:47,575 [INFO] pages.cart_page: [CartPage] [cart] Trace saved: reports/cart_trace_20260308_210847.txt
+2026-03-08 21:08:47,575 [INFO] pages.cart_page: [CartPage] [ok] Assertion PASSED: $0.00 ≤ $4000.00
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2264' in position 88: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\lital\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\tests\test_ebay_e2e.py", line 84, in test_search_and_buy_under_budget
+    cart_page.assert_cart_total_not_exceeds(budget_per_item, added_count)
+  File "C:\Users\lital\OneDrive\Desktop\ebay-automation-repo\pages\cart_page.py", line 74, in assert_cart_total_not_exceeds
+    logger.info(
+Message: '[CartPage] [ok] Assertion PASSED: $0.00 ≤ $4000.00'
+Arguments: ()
+2026-03-08 21:08:47,577 [INFO] test_ebay_e2e: [ok] Scenario TC_001 PASSED!
+2026-03-08 21:08:52,518 [INFO] conftest: [conftest] [closed] Closed firefox

@@ -1,0 +1,117 @@
+[32mINFO    [0m conftest:conftest.py:81 [conftest] [web] Launching chromium (headless=False)
+[32mINFO    [0m test_ebay_e2e:test_ebay_e2e.py:45 
+============================================================
+Scenario: TC_001 — Search for shoes under $220
+============================================================
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com
+[32mINFO    [0m pages.search_page:search_page.py:42 [SearchPage] Searching: 'shoes' | max_price=800 | limit=5
+[32mINFO    [0m pages.search_page:search_page.py:87 [SearchPage] Closed blocking popup
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Search box' — attempt 1/2 using: input#gh-ac
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Search box' found on attempt 1 with: input#gh-ac
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Search button' — attempt 1/3 using: input#gh-btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Search button' attempt 1 FAILED with: input#gh-btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Search button' — attempt 2/3 using: button[type='submit']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Search button' found on attempt 2 with: button[type='submit']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Max price input' — attempt 1/2 using: input[aria-label='Maximum Value in $']
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Max price input' attempt 1 FAILED with: input[aria-label='Maximum Value in $']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Max price input' — attempt 2/2 using: input[placeholder='Max']
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Max price input' attempt 2 FAILED with: input[placeholder='Max']
+[31m[1mERROR   [0m utils.locator_utils:locator_utils.py:97 [SmartLocator] 📸 Failure screenshot saved: reports/screenshots/FAIL_Max price input_20260308_210512.png
+[33mWARNING [0m pages.search_page:search_page.py:100 [SearchPage] Price filter UI not found - filtering manually.
+[32mINFO    [0m pages.search_page:search_page.py:52 [SearchPage] Scraping page 1...
+[32mINFO    [0m pages.search_page:search_page.py:132 [SearchPage] Found 10 items under 800
+[32mINFO    [0m pages.search_page:search_page.py:55 [SearchPage] Page 1: got 5 items. Total: 5/5
+[32mINFO    [0m pages.search_page:search_page.py:66 [SearchPage] Final result: 5 URLs collected.
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/search_results_shoes_20260308_210513.png
+[32mINFO    [0m test_ebay_e2e:test_ebay_e2e.py:57 Found 5 items matching criteria.
+[32mINFO    [0m pages.item_page:item_page.py:77 [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/306806687024?_skw=shoes&itmmeta=01KK7DDDBZETT70PR4M0PVR...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/306806687024?_skw=shoes&itmmeta=01KK7DDDBZETT70PR4M0PVR2NC&hash=item476f1a8530:g:tZsAAeSw7cppqui7&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xDkIp8PWv%2Fd7FVH%2FpIsgFmm%2FJqaVJnU6svN%2BBcrDXSbasV4bM0jJGY4sylV7NpKvgb48qfg%2FN45jObioLKf1HjnhPmwoOLGXezoRjw5rm%2FwkAZKBSTH6P2It91%2F%2BUmubyv0KoY0cn%2BPnPy08eXrFnxuguBQ6LlQ0FAlcZEbOQjuhpP0O0gNnDClo4GspTLKPnLeyMjljCL%2FfzGjCijmXQIlk19DSgYZ0t8r3XNO96O3hg%3D%3D%7Ctkp%3ABk9SR7DWte2ZZw
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+[32mINFO    [0m pages.item_page:item_page.py:84 [ItemPage] Product: P6000 Nike Shoes Any and All Size Brand New with Box and Tag
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+[32mINFO    [0m pages.item_page:item_page.py:95 [ItemPage] [ok] Added to cart: P6000 Nike Shoes Any and All Size Brand New with Box and Tag
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_P6000_Nike_Shoes_Any_and_All_S_20260308_210527.png
+[32mINFO    [0m pages.item_page:item_page.py:77 [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/376849461735?_skw=shoes&itmmeta=01KK7DDDBZ9J4RZNJA04VEX...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/376849461735?_skw=shoes&itmmeta=01KK7DDDBZ9J4RZNJA04VEX7XN&hash=item57bdfa71e7:g:66gAAeSw4U9pYMrz&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBebCrp%2Fx4nQxKPJDwRf7iZy0sqC4BUT9vDYfyBIAA7tDLLq1yoZhZcBvk%2FN5M3Pld08m4T351LHRSE%2B%2Bad1KDq0UqV5rjMZylcIMOWswz0BO3fyJwcI4yCR3t3J6HkQEbUZx5iyMJTAaj08CqOwQIpQpQ5ZQp3Lv%2BlF8CEVBeOgwBuQT4Jd7jkSB87D25haDiMMoCovIJyzj5cBlcuyEBLve1HDU%2FSwdvX00ei5ZQOyHsmLW%2FjiJVwG%2BKFEYFM%2F0W0E2TXAbpLB0jmGnf61e%2FK%7Ctkp%3ABFBMsNa17Zln
+[33mWARNING [0m utils.retry_utils:retry_utils.py:46 [Retry] ⚠️  'navigate' attempt 1/3 failed: Error: Page.goto: Navigation to "https://www.ebay.com/itm/376849461735?_skw=shoes&itmmeta=01KK7DDDBZ9J4RZNJA04VEX7XN&hash=item57bdfa71e7:g:66gAAeSw4U9pYMrz&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBebCrp%2Fx4nQxKPJDwRf7iZy0sqC4BUT9vDYfyBIAA7tDLLq1yoZhZcBvk%2FN5M3Pld08m4T351LHRSE%2B%2Bad1KDq0UqV5rjMZylcIMOWswz0BO3fyJwcI4yCR3t3J6HkQEbUZx5iyMJTAaj08CqOwQIpQpQ5ZQp3Lv%2BlF8CEVBeOgwBuQT4Jd7jkSB87D25haDiMMoCovIJyzj5cBlcuyEBLve1HDU%2FSwdvX00ei5ZQOyHsmLW%2FjiJVwG%2BKFEYFM%2F0W0E2TXAbpLB0jmGnf61e%2FK%7Ctkp%3ABFBMsNa17Zln" is interrupted by another navigation to "https://www.ebay.com/splashui/captcha?ap=1&appName=orch&ru=https%3A%2F%2Fsignin.ebay.com%2Fws%2FeBayISAPI.dll%3FSignIn%3D%26UsingSSL%3D1%26siteid%3D0%26co_partnerId%3D2%26pageType%3D4628089%26ru%3Dhttps%253A%252F%252Fwww.ebay.com%252Fitm%252F306806687024%253F_skw%253Dshoes%2526itmmeta%253D01KK7DDDBZETT70PR4M0PVR2NC%2526hash%253Ditem476f1a8530%25253Ag%25253AtZsAAeSw7cppqui7%2526itmprp%253Denc%25253AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xDkIp8PWv%25252Fd7FVH%25252FpIsgFmm%25252FJqaVJnU6svN%25252BBcrDXSbasV4bM0jJGY4sylV7NpKvgb48qfg%25252FN45jObioLKf1HjnhPmwoOLGXezoRjw5rm%25252FwkAZKBSTH6P2It91%25252F%25252BUmubyv0KoY0cn%25252BPnPy08eXrFnxuguBQ6LlQ0FAlcZEbOQjuhpP0O0gNnDClo4GspTLKPnLeyMjljCL%25252FfzGjCijmXQIlk19DSgYZ0t8r3XNO96O3hg%25253D%25253D%25257Ctkp%25253ABk9SR7DWte2ZZw%2526m2mOpen%253D1&iid=1cb101cb-daaa-4bf4-8adc-2e95944f3f7e&iim=tNzcuMTk&iia=YoI3LjIyWC&iiz=rzQMS40MQ**Awz"
+Call log:
+  - navigating to "https://www.ebay.com/itm/376849461735?_skw=shoes&itmmeta=01KK7DDDBZ9J4RZNJA04VEX7XN&hash=item57bdfa71e7:g:66gAAeSw4U9pYMrz&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBebCrp%2Fx4nQxKPJDwRf7iZy0sqC4BUT9vDYfyBIAA7tDLLq1yoZhZcBvk%2FN5M3Pld08m4T351LHRSE%2B%2Bad1KDq0UqV5rjMZylcIMOWswz0BO3fyJwcI4yCR3t3J6HkQEbUZx5iyMJTAaj08CqOwQIpQpQ5ZQp3Lv%2BlF8CEVBeOgwBuQT4Jd7jkSB87D25haDiMMoCovIJyzj5cBlcuyEBLve1HDU%2FSwdvX00ei5ZQOyHsmLW%2FjiJVwG%2BKFEYFM%2F0W0E2TXAbpLB0jmGnf61e%2FK%7Ctkp%3ABFBMsNa17Zln", waiting until "domcontentloaded"
+
+[32mINFO    [0m utils.retry_utils:retry_utils.py:56 [Retry] ⏳ Waiting 1.0s before next attempt...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/376849461735?_skw=shoes&itmmeta=01KK7DDDBZ9J4RZNJA04VEX7XN&hash=item57bdfa71e7:g:66gAAeSw4U9pYMrz&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBebCrp%2Fx4nQxKPJDwRf7iZy0sqC4BUT9vDYfyBIAA7tDLLq1yoZhZcBvk%2FN5M3Pld08m4T351LHRSE%2B%2Bad1KDq0UqV5rjMZylcIMOWswz0BO3fyJwcI4yCR3t3J6HkQEbUZx5iyMJTAaj08CqOwQIpQpQ5ZQp3Lv%2BlF8CEVBeOgwBuQT4Jd7jkSB87D25haDiMMoCovIJyzj5cBlcuyEBLve1HDU%2FSwdvX00ei5ZQOyHsmLW%2FjiJVwG%2BKFEYFM%2F0W0E2TXAbpLB0jmGnf61e%2FK%7Ctkp%3ABFBMsNa17Zln
+[32mINFO    [0m utils.retry_utils:retry_utils.py:40 [Retry] ✅ 'navigate' succeeded on attempt 2
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+[32mINFO    [0m pages.item_page:item_page.py:84 [ItemPage] Product: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+[32mINFO    [0m pages.item_page:item_page.py:95 [ItemPage] [ok] Added to cart: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Quick_Dry_Aqua_Socks_Adults+Ki_20260308_210543.png
+[32mINFO    [0m pages.item_page:item_page.py:77 [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/236305831395?_skw=shoes&itmmeta=01KK7DDDBZN44XRFQYPGKW8...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/236305831395?_skw=shoes&itmmeta=01KK7DDDBZN44XRFQYPGKW87F4&hash=item3704ecd5e3:g:i4gAAeSwyj1ouGtZ&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xCw1QwucuTnO4v5t%2FYk06LOnD8EtkwOl3C%2BxwPqxazZ5Af7KH12OY0Y4uokxAFYEXp%2BmGDPZG7wjmed0RdyoBaqinD7UUc3SR9zNbPvE4XgFPHIIPPRKsrYg4%2BWm7AFZ7tzFQDh952MvcEhusrzvG%2BJQbm5shM73HnGqT5U6E7WsZZmNgC%2Fdc%2FBuSYOXATKGQUj2iIDMKnolJre2HgriZI330oEVHIru4YleoYtLVilRQIMAi3F066LRslWODTI61DCRPI2M4N40lZxyZO9gMAr%7Ctkp%3ABFBMsNa17Zln
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+[32mINFO    [0m pages.item_page:item_page.py:84 [ItemPage] Product: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+[32mINFO    [0m pages.item_page:item_page.py:95 [ItemPage] [ok] Added to cart: Quick Dry Aqua Socks Adults+Kids Water Shoes Beach Surfing S
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Quick_Dry_Aqua_Socks_Adults+Ki_20260308_210555.png
+[32mINFO    [0m pages.item_page:item_page.py:77 [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/127713556661?_skw=shoes&itmmeta=01KK7DDDBZWVMAH2N66KHKA...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/127713556661?_skw=shoes&itmmeta=01KK7DDDBZWVMAH2N66KHKASAK&hash=item1dbc5238b5:g:xpcAAeSwOndppSRb&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xB87EmFbqbymiDbof9HtWmRxFBo03A1O67fOWHp6VP7s4z6bEdnD1Vjzs9QHJvxAU5LElEkDdVK1rY%2F6WdHSrzq%2FtXx4kUDDyzn9EuKKT7MjD5KHRxngvhEGxbp3CjBXh6wpzM4eiJny8zecGWsHndFQ3mZvYE%2BYFlvgWEpVi4nmdGcsmxKlX%2FPpeQwkX1EywmdianwA2X4yju6avy6p4L5IH%2BIbh6hwJCqnoMU71apULCx6EukcB3yd921PZePJcq%2FX%2Fho1p0%2Fg04FyoMqzgqg%7Ctkp%3ABFBMsNa17Zln
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+[32mINFO    [0m pages.item_page:item_page.py:84 [ItemPage] Product: Mens Running Shoes Mesh Breathable Trail Runners Fashion Wal
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+[32mINFO    [0m pages.item_page:item_page.py:95 [ItemPage] [ok] Added to cart: Mens Running Shoes Mesh Breathable Trail Runners Fashion Wal
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Mens_Running_Shoes_Mesh_Breath_20260308_210608.png
+[32mINFO    [0m pages.item_page:item_page.py:77 [ItemPage] 🛒 Opening item: https://www.ebay.com/itm/406740849491?_skw=shoes&itmmeta=01KK7DDDBZG14YH879EC619...
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://www.ebay.com/itm/406740849491?_skw=shoes&itmmeta=01KK7DDDBZG14YH879EC619VXX&hash=item5eb3a4d353:g:8v8AAeSwC1Vpqjy1&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xDHItY1AD6VOP4vuDALY00%2BDWj1%2F6B1xNs2I%2FxcvUM13ifwObSWJ15JbxC1mrBwqOCt2UAjy2ajgAdHG8rR3KIxfa6vhTrGy4zkrTSVZwpKwyMLvLvKN9mcW6CoFhp9m5ej6vI9rs%2BZL3tAWLH%2FHYQmAZ%2BVI9zP5edfFiP6ZKd%2BNofZOtq2MN7rP1oGJ5E2K648bSRg8DtfFMkSIPQHjcIp8VS6%2FrC169MyxOd%2B7WfOXw%3D%3D%7Ctkp%3ABk9SR7DWte2ZZw
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Item title' — attempt 1/2 using: h1.x-item-title__mainTitle span
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Item title' found on attempt 1 with: h1.x-item-title__mainTitle span
+[32mINFO    [0m pages.item_page:item_page.py:84 [ItemPage] Product: Nike Minds Slides
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 1/3 using: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 1 FAILED with: //a[contains(@class,'x-atc-action__btn') and contains(.,'Add to cart')]
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 2/3 using: a#atcBtn_btn
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Add to Cart button' attempt 2 FAILED with: a#atcBtn_btn
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Add to Cart button' — attempt 3/3 using: button[data-testid='ux-call-to-action']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:50 [SmartLocator] [ok] 'Add to Cart button' found on attempt 3 with: button[data-testid='ux-call-to-action']
+[32mINFO    [0m pages.item_page:item_page.py:95 [ItemPage] [ok] Added to cart: Nike Minds Slides
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_add_Nike_Minds_Slides_20260308_210621.png
+[32mINFO    [0m test_ebay_e2e:test_ebay_e2e.py:78 Successfully added 5/5 items to cart.
+[32mINFO    [0m pages.cart_page:cart_page.py:51 [CartPage] [assert] Asserting cart total ≤ $4000.00 (5 items × $800)
+[32mINFO    [0m pages.base_page:base_page.py:29 [BasePage] Navigating to: https://cart.payments.ebay.com/sc/view
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Cart subtotal' — attempt 1/3 using: //span[@id='subtotal-value']
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Cart subtotal' attempt 1 FAILED with: //span[@id='subtotal-value']
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Cart subtotal' — attempt 2/3 using: span.sc-subtotal-amount
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Cart subtotal' attempt 2 FAILED with: span.sc-subtotal-amount
+[32mINFO    [0m utils.locator_utils:locator_utils.py:44 [SmartLocator] 'Cart subtotal' — attempt 3/3 using: //div[contains(@class,'sc-subtotal')]//span[contains(@class,'amount')]
+[33mWARNING [0m utils.locator_utils:locator_utils.py:57 [SmartLocator] [fail] 'Cart subtotal' attempt 3 FAILED with: //div[contains(@class,'sc-subtotal')]//span[contains(@class,'amount')]
+[31m[1mERROR   [0m utils.locator_utils:locator_utils.py:97 [SmartLocator] 📸 Failure screenshot saved: reports/screenshots/FAIL_Cart subtotal_20260308_210648.png
+[33mWARNING [0m pages.cart_page:cart_page.py:91 [CartPage] [warning]  Could not read subtotal element: [SmartLocator] All 3 locators failed for 'Cart subtotal'. Tried: ["//span[@id='subtotal-value']", 'span.sc-subtotal-amount', "//div[contains(@class,'sc-subtotal')]//span[contains(@class,'amount')]"]
+[32mINFO    [0m pages.cart_page:cart_page.py:94 [CartPage] Falling back to summing individual item prices...
+[32mINFO    [0m pages.cart_page:cart_page.py:107 [CartPage] Summed 0 items = $0.00
+[32mINFO    [0m pages.cart_page:cart_page.py:61 [CartPage] [total] Cart total: $0.00 | Max allowed: $4000.00
+[32mINFO    [0m pages.base_page:base_page.py:49 [BasePage] 📸 Screenshot saved: reports/screenshots/cart_assertion_20260308_210648.png
+[32mINFO    [0m pages.cart_page:cart_page.py:132 [CartPage] [cart] Trace saved: reports/cart_trace_20260308_210648.txt
+[32mINFO    [0m pages.cart_page:cart_page.py:74 [CartPage] [ok] Assertion PASSED: $0.00 ≤ $4000.00
+[32mINFO    [0m test_ebay_e2e:test_ebay_e2e.py:86 [ok] Scenario TC_001 PASSED!
+[32mINFO    [0m conftest:conftest.py:89 [conftest] [closed] Closed chromium
