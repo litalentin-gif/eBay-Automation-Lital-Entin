@@ -48,14 +48,14 @@ class SmartLocator:
                 loc = self.page.locator(selector).first
                 loc.wait_for(state="visible", timeout=timeout)
                 logger.info(
-                    f"[SmartLocator] ✅ '{self.element_name}' found "
+                    f"[SmartLocator] [ok] '{self.element_name}' found "
                     f"on attempt {locator_num} with: {selector}"
                 )
                 return loc
 
             except PlaywrightTimeoutError:
                 logger.warning(
-                    f"[SmartLocator] ❌ '{self.element_name}' "
+                    f"[SmartLocator] [fail] '{self.element_name}' "
                     f"attempt {locator_num} FAILED with: {selector}"
                 )
 
@@ -75,13 +75,13 @@ class SmartLocator:
                 self.page.locator(selector).first.wait_for(state="visible", timeout=timeout)
                 all_elements = self.page.locator(selector).all()
                 logger.info(
-                    f"[SmartLocator] ✅ '{self.element_name}' found {len(all_elements)} elements "
+                    f"[SmartLocator] [ok] '{self.element_name}' found {len(all_elements)} elements "
                     f"on attempt {i+1} with: {selector}"
                 )
                 return all_elements
             except PlaywrightTimeoutError:
                 logger.warning(
-                    f"[SmartLocator] ❌ '{self.element_name}' attempt {i+1} FAILED"
+                    f"[SmartLocator] [fail] '{self.element_name}' attempt {i+1} FAILED"
                 )
 
         self._take_failure_screenshot()

@@ -83,7 +83,7 @@ class TestEbayE2E:
             cart_page = CartPage(page)
             cart_page.assert_cart_total_not_exceeds(budget_per_item, added_count)
 
-        logger.info(f"✅ Scenario {scenario['scenario_id']} PASSED!")
+        logger.info(f"[ok] Scenario {scenario['scenario_id']} PASSED!")
 
 
 # ── Isolated unit-style tests ──────────────────────────────────────

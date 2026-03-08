@@ -10,9 +10,20 @@ import json
 import logging
 import pytest
 import yaml
+import io
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 from datetime import datetime
 from playwright.sync_api import sync_playwright, Browser, Page
 
+def pytest_configure(config):
+    """Fix emoji/Unicode encoding on Windows cp1252 consoles."""
+    import sys
+    if hasattr(sys.stderr, 'buffer'):
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+    if hasattr(sys.stdout, 'buffer'):
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 # ── Load config ────────────────────────────────────────────────────
 
@@ -67,7 +78,7 @@ def browser(playwright_instance, request):
     """
     browser_name = request.param
     headless = os.getenv("HEADLESS", "false").lower() == "true"
-    logger.info(f"[conftest] 🌐 Launching {browser_name} (headless={headless})")
+    logger.info(f"[conftest] [web] Launching {browser_name} (headless={headless})")
 
     browser_launcher = getattr(playwright_instance, browser_name)
     browser_instance: Browser = browser_launcher.launch(headless=headless)
@@ -75,7 +86,7 @@ def browser(playwright_instance, request):
     yield browser_instance
 
     browser_instance.close()
-    logger.info(f"[conftest] 🔒 Closed {browser_name}")
+    logger.info(f"[conftest] [closed] Closed {browser_name}")
 
 
 @pytest.fixture
@@ -103,7 +114,7 @@ def page(browser, request) -> Page:
         os.makedirs("reports/screenshots", exist_ok=True)
         path = f"reports/screenshots/FAIL_{test_name}_{RUN_ID}.png"
         page_instance.screenshot(path=path)
-        logger.error(f"[conftest] 📸 Failure screenshot: {path}")
+        logger.error(f"[conftest] [screenshot] Failure screenshot: {path}")
 
     # Save trace
     os.makedirs("reports/traces", exist_ok=True)

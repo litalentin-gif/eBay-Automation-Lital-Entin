@@ -50,7 +50,25 @@ class ItemPage(BasePage):
 
     # ── Main function ──────────────────────────────────────────────
 
-    @retry_on_failure(max_attempts=3, backoff_factor=1.5)
+    def _close_popups(self):
+        """Close 'Message seller' popup if present."""
+        # Close "Message seller" popup if present
+        try:
+            close_btn = self.page.locator("button[aria-label='Close']").first
+            if close_btn.is_visible(timeout=2000):
+                close_btn.click()
+                self.page.wait_for_timeout(500)
+        except:
+            pass
+
+        # Also try X button by class
+        try:
+            close_btn2 = self.page.locator(".message-modal__close, .overlay-close, [class*='close']").first
+            if close_btn2.is_visible(timeout=1000):
+                close_btn2.click()
+                self.page.wait_for_timeout(500)
+        except:
+            pass
     def add_item_to_cart(self, url: str) -> bool:
         """
         Open the item URL, select variants if required, click Add to Cart.
@@ -73,13 +91,13 @@ class ItemPage(BasePage):
         # Try to click Add to Cart
         try:
             add_btn = self.smart(self.ADD_TO_CART_BTN, "Add to Cart button").find(timeout=5000)
-            add_btn.click()
-            logger.info(f"[ItemPage] ✅ Added to cart: {title[:60]}")
+            self.page.evaluate("el => el.click()", add_btn.element_handle())
+            logger.info(f"[ItemPage] [ok] Added to cart: {title[:60]}")
             self.take_screenshot(f"cart_add_{title[:30].replace(' ', '_')}")
             return True
 
         except Exception as e:
-            logger.warning(f"[ItemPage] ⚠️  Could not add to cart: {e}")
+            logger.warning(f"[ItemPage] [warning] Could not add to cart: {e}")
             self.take_screenshot(f"cart_fail_{title[:30].replace(' ', '_')}")
             return False
 
@@ -106,7 +124,7 @@ class ItemPage(BasePage):
                     val = chosen.get_attribute("value")
                     sel.select_option(value=val)
                     logger.info(
-                        f"[ItemPage] 🎨 Selected variant: {chosen.inner_text().strip()}"
+                        f"[ItemPage] [info] Selected variant: {chosen.inner_text().strip()}"
                     )
 
             # Handle button-style variant pickers (clickable size/color swatches)
@@ -116,7 +134,7 @@ class ItemPage(BasePage):
             if swatch_buttons:
                 chosen_swatch = random.choice(swatch_buttons)
                 chosen_swatch.click()
-                logger.info("[ItemPage] 🎨 Selected swatch variant.")
+                logger.info("[ItemPage] [info] Selected swatch variant.")
 
         except Exception as e:
-            logger.debug(f"[ItemPage] Variant selection skipped: {e}")
+            logger.debug(f"[ItemPage] [debug] Variant selection skipped: {e}")

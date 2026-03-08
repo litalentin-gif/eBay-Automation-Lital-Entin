@@ -1,0 +1,12 @@
+{
+  "test_scenarios": [
+    {
+      "scenario_id": "TC_001",
+      "description": "Search for shoes under $220",
+      "query": "shoes",
+      "max_price": 800,
+      "limit": 5,
+      "budget_per_item": 800
+    }
+  ]
+}

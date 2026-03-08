@@ -49,7 +49,7 @@ class CartPage(BasePage):
         """
         max_allowed = budget_per_item * items_count
         logger.info(
-            f"[CartPage] 🧮 Asserting cart total ≤ ${max_allowed:.2f} "
+            f"[CartPage] [assert] Asserting cart total ≤ ${max_allowed:.2f} "
             f"({items_count} items × ${budget_per_item})"
         )
 
@@ -58,7 +58,7 @@ class CartPage(BasePage):
 
         # Read total
         actual_total = self._read_cart_total()
-        logger.info(f"[CartPage] 💰 Cart total: ${actual_total:.2f} | Max allowed: ${max_allowed:.2f}")
+        logger.info(f"[CartPage] [total] Cart total: ${actual_total:.2f} | Max allowed: ${max_allowed:.2f}")
 
         # Save evidence
         self.take_screenshot("cart_assertion")
@@ -66,13 +66,13 @@ class CartPage(BasePage):
 
         # Assert
         assert actual_total <= max_allowed, (
-            f"[CartPage] ❌ Cart total ${actual_total:.2f} EXCEEDS "
+            f"[CartPage] [fail] Cart total ${actual_total:.2f} EXCEEDS "
             f"budget of ${max_allowed:.2f} "
             f"({items_count} items × ${budget_per_item})"
         )
 
         logger.info(
-            f"[CartPage] ✅ Assertion PASSED: ${actual_total:.2f} ≤ ${max_allowed:.2f}"
+            f"[CartPage] [ok] Assertion PASSED: ${actual_total:.2f} ≤ ${max_allowed:.2f}"
         )
 
     # ── Helpers ────────────────────────────────────────────────────
@@ -88,7 +88,7 @@ class CartPage(BasePage):
             if price is not None:
                 return price
         except Exception as e:
-            logger.warning(f"[CartPage] ⚠️  Could not read subtotal element: {e}")
+            logger.warning(f"[CartPage] [warning]  Could not read subtotal element: {e}")
 
         # Fallback: sum individual item prices
         logger.info("[CartPage] Falling back to summing individual item prices...")
@@ -98,7 +98,7 @@ class CartPage(BasePage):
         """Sum all individual item prices in the cart."""
         total = 0.0
         price_elements = self.page.locator(
-            ".sc-item-price, //span[contains(@class,'sc-item-price')]"
+            ".sc-item-price"
         ).all()
         for el in price_elements:
             price = self._parse_price(el.inner_text())
@@ -128,5 +128,5 @@ class CartPage(BasePage):
             f.write(f"Items in cart:   {count}\n")
             f.write(f"Actual total:    ${actual:.2f}\n")
             f.write(f"Max allowed:     ${max_allowed:.2f}\n")
-            f.write(f"Result:          {'PASS ✅' if actual <= max_allowed else 'FAIL ❌'}\n")
-        logger.info(f"[CartPage] 📄 Trace saved: {path}")
+            f.write(f"Result:          {'PASS [ok]' if actual <= max_allowed else 'FAIL [fail]'}\n")
+        logger.info(f"[CartPage] [cart] Trace saved: {path}")
