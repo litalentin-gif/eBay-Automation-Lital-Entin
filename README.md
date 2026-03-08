@@ -157,3 +157,6 @@ Test scenarios are loaded from `data/test_data.json`. Adding a new scenario requ
 - **Allure** — full step-by-step report with screenshots attached to each test
 - **Screenshots** — auto-saved on every cart add, assertion, and locator failure
 - **Logs** — structured logging per module with SmartLocator attempt tracking
+
+## Allure Report Preview
+![Allure Report](reports/allure-screenshot.png)
