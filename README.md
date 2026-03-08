@@ -1,155 +1,159 @@
-# eBay Automation Suite 🤖
-
-End-to-end automation for eBay: Search → Filter by price → Add to Cart → Assert total.
-
-Built with **Python + Playwright + pytest**, following POM, OOP, and Data-Driven patterns.
+# eBay E2E Automation Framework
+**Author:** Lital Entin  
+**Stack:** Python · Playwright · pytest · Allure
 
 ---
 
-## 🚀 Quick Start
+## Overview
 
-### 1. Prerequisites
-- Python 3.11+
-- Git
+End-to-end automation framework for eBay Israel, implementing a full shopping flow:  
+**Search → Filter by Price → Add to Cart → Assert Total**
 
-### 2. Install dependencies
+Built with clean architecture: POM, OOP, Data-Driven testing, Smart Locators with fallback, parallel browser execution, and graceful recovery.
+
+---
+
+## Project Structure
+
+```
+ebay-automation-repo/
+├── pages/
+│   ├── base_page.py        # BasePage: navigation, screenshots, SmartLocator factory
+│   ├── search_page.py      # Search, price filtering (UI + JS fallback), pagination
+│   ├── item_page.py        # Open item, add to cart, popup handling
+│   └── cart_page.py        # Navigate to cart, read subtotal, assert budget
+├── utils/
+│   ├── locator_utils.py    # SmartLocator: multi-locator fallback engine with logging
+│   └── retry_utils.py      # @retry_on_failure decorator + RetryContext
+├── tests/
+│   └── test_ebay_e2e.py    # Data-Driven E2E test (clean, no locator logic)
+├── data/
+│   └── test_data.json      # Test scenarios: query, max_price, limit, budget_per_item
+├── config/
+│   └── config.yaml         # Timeouts, browser list, base URL
+├── conftest.py             # Fixtures: parallel browsers, scenario parametrize, teardown
+├── pytest.ini              # pytest config: log format, parallel workers
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Prerequisites
+
+- Python 3.10+
+- pip
+- Java (required for Allure CLI) — see installation steps below
+
+---
+
+## Installation
+
 ```bash
+# 1. Clone the repo
+git clone https://github.com/litalentin-gif/eBay-Automation-Lital-Entin.git
+cd eBay-Automation-Lital-Entin
+
+# 2. Install Python dependencies
 pip install -r requirements.txt
+
+# 3. Install Playwright browsers
 playwright install chromium firefox
 ```
 
-### 3. Run all tests (single browser)
-```bash
-pytest
+### Install Allure CLI (Windows)
+
+```powershell
+# Install Scoop (if not already installed)
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+
+# Install Java
+scoop bucket add java
+scoop install temurin-lts-jdk
+
+# Install Allure
+scoop install allure
 ```
 
-### 4. Run in parallel (2 browsers × 3 scenarios = 6 tests at once)
+---
+
+## Running the Tests
+
+**Basic run (Chrome + Firefox):**
 ```bash
-pytest -n 4
+pytest tests/test_ebay_e2e.py -v -k "TC_001"
 ```
 
-### 5. Run with Allure report
+**With Allure report:**
 ```bash
-pytest --alluredir=reports/allure-results
+# Step 1 - Run tests and collect results
+pytest tests/test_ebay_e2e.py -v -k "TC_001" --alluredir=reports/allure-results
+
+# Step 2 - Refresh PATH (Windows, run once per terminal session)
+$env:PATH = [System.Environment]::GetEnvironmentVariable("PATH","User") + ";" + [System.Environment]::GetEnvironmentVariable("PATH","Machine")
+
+# Step 3 - Serve the report (opens browser automatically)
 allure serve reports/allure-results
 ```
 
-### 6. Run headless (for CI)
-```bash
-HEADLESS=true pytest -n 4
-```
+---
+
+## Architecture
+
+### POM (Page Object Model)
+Each page has a dedicated class. Tests contain zero locator logic — all complexity lives in Page Objects and Utils.
+
+### SmartLocator
+Every element defines 2–3 alternative locators (CSS + XPath combinations).  
+At runtime, `SmartLocator` tries each in order:
+- Logs which locator succeeded / failed
+- Takes a failure screenshot on final failure
+- Raises a clear error with the full list of attempted locators
+
+### Data-Driven
+Test scenarios are loaded from `data/test_data.json`. Adding a new scenario requires zero code changes.
+
+### Parallel Execution
+`conftest.py` parametrizes tests by browser (Chrome, Firefox). Each test runs in an isolated browser session with no shared state.
+
+### Retry & Resilience
+`@retry_on_failure` decorator with configurable attempts and backoff delay handles flaky network conditions. Price filtering falls back to JavaScript evaluation if the eBay UI filter is unavailable.
 
 ---
 
-## 🗂️ Project Architecture
+## Limitations & Assumptions
 
-```
-ebay_automation/
-├── pages/                 ← Page Object Model
-│   ├── base_page.py       ← Shared logic (navigation, screenshots, smart locator factory)
-│   ├── search_page.py     ← Search + price filter + pagination
-│   ├── item_page.py       ← Variant selection + Add to Cart
-│   └── cart_page.py       ← Cart total reading + assertion
-│
-├── utils/                 ← Infrastructure layer
-│   ├── locator_utils.py   ← SmartLocator: multi-locator fallback with logging
-│   └── retry_utils.py     ← @retry_on_failure decorator + RetryContext
-│
-├── tests/
-│   └── test_ebay_e2e.py   ← Clean tests (no locators, no retry logic here)
-│
-├── data/
-│   └── test_data.json     ← Test scenarios (Data-Driven)
-│
-├── config/
-│   └── config.yaml        ← Timeouts, browsers, credentials
-│
-├── reports/               ← Auto-generated on each run
-│   ├── allure-results/
-│   ├── screenshots/
-│   ├── traces/
-│   └── logs/
-│
-├── conftest.py            ← pytest fixtures, browser setup, parametrization
-├── pytest.ini             ← pytest config
-└── requirements.txt
-```
-
-### Key Design Decisions
-
-**Smart Locators** — each element has 2+ locators. If the primary fails,
-`SmartLocator` silently tries the next one and logs which succeeded/failed.
-Tests don't know this is happening — they stay clean.
-
-**Retry + Backoff** — `@retry_on_failure(max_attempts=3, backoff_factor=1.5)`
-on any function that touches the network. Wait grows: 1s → 1.5s → 2.25s.
-
-**Session isolation** — each test gets its own browser context via `browser.new_context()`.
-No shared state between parallel tests.
-
-**Data-Driven** — `data/test_data.json` drives all test scenarios.
-Add a new scenario → no code changes needed.
+| Item | Detail |
+|------|--------|
+| **No login** | eBay Israel requires login for a persistent cart. The framework adds items per-session; cart subtotal verification falls back to summing individual item prices scraped from the page. |
+| **Price filter UI** | eBay Israel does not expose a standard price filter input. The framework filters results via JavaScript evaluation of scraped prices. |
+| **eBay Israel locators** | Item cards use `s-card__link` (not `s-item__link` used on ebay.com). All locators are tuned for `www.ebay.com` with Israeli locale. |
+| **Screenshots** | Saved locally to `reports/screenshots/` — excluded from Git via `.gitignore`. |
 
 ---
 
-## ⚙️ Configuration
+## Test Data
 
-Edit `config/config.yaml`:
-```yaml
-timeouts:
-  default: 10000       # ms per action
-  navigation: 30000    # ms for page loads
-
-retry:
-  max_attempts: 3
-  backoff_factor: 1.5
-```
-
-Add/remove browsers in `conftest.py`:
-```python
-@pytest.fixture(params=["chromium", "firefox"])  # add "webkit" for Safari
-```
-
----
-
-## 📊 Reports
-
-| Type | Path | How to view |
-|------|------|-------------|
-| Allure | `reports/allure-results/` | `allure serve reports/allure-results` |
-| HTML | `reports/report.html` | Open in browser |
-| Traces | `reports/traces/*.zip` | `playwright show-trace <file>` |
-| Screenshots | `reports/screenshots/` | Open directly |
-| Logs | `reports/logs/` | Any text editor |
-
----
-
-## ⚠️ Limitations & Assumptions
-
-- **Login**: eBay allows guest browsing and adding to cart without login.
-  Cart state is stored in cookies per browser session.
-- **Currency**: All prices assumed to be USD ($). Parsing handles `$X.XX` and `$X,XXX.XX`.
-- **eBay UI changes**: Smart Locators with 2-3 fallbacks per element reduce
-  but don't eliminate risk from UI changes. Locators may need updating over time.
-- **Variants**: Some items require variant selection (size/color) before Add to Cart.
-  The test selects randomly from available options — some combinations may be out of stock.
-- **Cart**: Items are added to a guest cart tied to browser cookies.
-  Cart persists within a test session but not across sessions.
-- **Parallel limits**: Running >4 workers may trigger eBay rate limiting.
-  Recommended: `-n 2` or `-n 4`.
-
----
-
-## 🧪 Adding New Test Scenarios
-
-Edit `data/test_data.json` — no code changes needed:
+`data/test_data.json`:
 ```json
-{
-  "scenario_id": "TC_004",
-  "description": "Search for keyboard under $80",
-  "query": "mechanical keyboard",
-  "max_price": 80,
-  "limit": 5,
-  "budget_per_item": 80
-}
+[
+  {
+    "scenario_id": "TC_001",
+    "description": "Search for shoes under $220",
+    "query": "shoes",
+    "max_price": 800,
+    "limit": 5,
+    "budget_per_item": 800
+  }
+]
 ```
+`max_price` and `budget_per_item` are in ILS (Israeli Shekel). 800 ILS ≈ $220.
+
+---
+
+## Reports
+
+- **Allure** — full step-by-step report with screenshots attached to each test
+- **Screenshots** — auto-saved on every cart add, assertion, and locator failure
+- **Logs** — structured logging per module with SmartLocator attempt tracking
